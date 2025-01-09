@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Outcomes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #555;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 20px; 
+            right: 20px;
+            max-height: 70px; 
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #555;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .learning-outcomes {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .learning-outcomes h2 {
+            color: #555;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+        .learning-outcomes p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+        .highlight {
+            background-color: #e0f7fa;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin: 1rem 0;
+            padding: 0.5rem;
+            border-left: 4px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        .dropdown {
+            margin: 1rem 0;
+        }
+        .dropdown button {
+            width: 100%;
+            padding: 1rem;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        .dropdown-content p {
+            margin: 0.5rem 0;
+        }
+        .dropdown-content ul {
+            list-style-type: disc;
+            margin: 0.5rem 0 0.5rem 2rem;
+        }
+        .dropdown-content ul li {
+            margin: 0.5rem 0;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Learning Outcomes</h1>
+        <img src="logo.jpg" alt="Logo">
+    </header>
+    <main>
+        <div class="learning-outcomes">
+            <h2>Learning Outcomes</h2>
+            <p>During this work term, I began to discover the specific areas of tech that I truly enjoyed working in, and this role was perfectly aligned with those interests. It provided me with an excellent opportunity to refine my SQL and database skills, which became a cornerstone of my contributions. Both Workiva and Yardi Voyager are heavily influenced by SQL, particularly MySQL, and their integration with property management and data workflows allowed me to deepen my expertise. I worked extensively on database management and automation tasks, which enhanced my ability to write efficient queries, manage datasets, and maintain data integrity within these systems.</p>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('data-analytics')">Data Analytics Skills</button>
+                <div id="data-analytics" class="dropdown-content">
+                    <p>Beyond SQL, I sought to improve my data analytics skills and gain more hands-on experience with tools like Power BI. While I did use SQL, Python, and Power BI to some extent during my term, my focus was more on refining my existing knowledge rather than developing entirely new analytical techniques. Through this process, I became more adept at creating visualizations and automating workflows that facilitated clearer insights into Pure Industrial’s data. However, I recognized that this role was more centered on operational and process improvements than deep data analysis, which left some room for further exploration in advanced analytics.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('financial-aspects')">Financial Aspects</button>
+                <div id="financial-aspects" class="dropdown-content">
+                    <p>I was also curious about exploring the financial aspects of Pure Industrial’s operations, as understanding the intersection of data and finance is a niche I am keen to pursue. Unfortunately, as my term neared its end, I realized that fully delving into this area would have required more time than I had. Nevertheless, the exposure I did gain to workflows and processes involving financial data was invaluable in shaping my understanding of how analytics support business decision-making.</p>
+                </div>
+            </div>
+            <p>This role not only honed my technical capabilities but also solidified my passion for database management and workflow automation. It highlighted areas for growth, particularly in advanced data analytics and financial analysis, which I look forward to exploring further in future opportunities.</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Abishec's Fall 2024 Learning Outcomes</p>
+    </footer>
+</body>
+</html>

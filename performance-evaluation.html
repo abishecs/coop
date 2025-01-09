@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Evaluation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #444;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 20px; 
+            right: 20px;
+            max-height: 70px; 
+        }
+        main {
+            padding: 2rem;
+        }
+        footer {
+            background-color: #444;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .evaluation {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .evaluation h2 {
+            color: #444;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+        .evaluation p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+        .dropdown {
+            margin: 1rem 0;
+        }
+        .dropdown button {
+            width: 100%;
+            padding: 1rem;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        .dropdown-content p {
+            margin: 0.5rem 0;
+        }
+        .dropdown-content ul {
+            list-style-type: disc;
+            margin: 0.5rem 0 0.5rem 2rem;
+        }
+        .dropdown-content ul li {
+            margin: 0.5rem 0;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Performance Evaluation</h1>
+        <img src="logo.jpg" alt="Logo">
+    </header>
+    <main>
+        <div class="evaluation">
+            <h2>Confirmation of Evaluation Provider</h2>
+            <p>University of Guelph Co-op Work Performance Evaluation</p>
+            <p>The following evaluation is a record of the student's employer's comments on areas related to job performance.</p>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('employer-info')">Employer Information</button>
+                <div id="employer-info" class="dropdown-content">
+                    <p><strong>Name:</strong> Lori Hipwell</p>
+                    <p><strong>Title:</strong> Director, Energy and Sustainability</p>
+                    <p><strong>Organization:</strong> Pure Industrial</p>
+                    <p><strong>Contact Information:</strong> lhipwell@pureindustrial.ca</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('student-evaluation')">Student Evaluation</button>
+                <div id="student-evaluation" class="dropdown-content">
+                    <ul>
+                        <li><strong>Quality of work:</strong> Outstanding</li>
+                        <li><strong>Productivity:</strong> Outstanding</li>
+                        <li><strong>Organization and Planning Skills:</strong> Outstanding</li>
+                        <li><strong>Decision Making and Judgement Skills:</strong> Outstanding</li>
+                        <li><strong>Oral and Written Communication Skills:</strong> Very Good</li>
+                        <li><strong>Ability to Work with Others:</strong> Very Good</li>
+                        <li><strong>Ability to Learn:</strong> Outstanding</li>
+                        <li><strong>Demonstrated Initiative:</strong> Outstanding</li>
+                        <li><strong>Reliability and Dependability:</strong> Outstanding</li>
+                        <li><strong>Student's progress toward attaining their work semester learning goals:</strong> Outstanding</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('overall-assessment')">Overall Assessment</button>
+                <div id="overall-assessment" class="dropdown-content">
+                    <p><strong>Overall Assessment:</strong> Outstanding</p>
+                    <p>Outstanding - Consistently performs at a level well beyond all aspects of the job requirements.</p>
+                    <p>Very Good - Performs all aspects of the job requirements in a consistently competent manner, exceeding requirements in one or more key areas.</p>
+                    <p>Good - Performs most aspects of the job requirements in a consistently competent manner.</p>
+                    <p>Marginal - Performs some aspects of the job requirements in a competent manner, with significant improvement required in one or more key areas.</p>
+                    <p>Unsatisfactory - Overall performance is clearly below acceptable standards for the job.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Abishec's Fall 2024 Performance Evaluation</p>
+    </footer>
+</body>
+</html>
