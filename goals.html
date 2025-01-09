@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,9 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            color: #333;
         }
+
         header {
             background-color: #333;
             color: #fff;
@@ -18,16 +21,18 @@
             text-align: center;
             position: relative;
         }
+
         header img {
             position: absolute;
-            top: 20px; 
+            top: 10px;
             right: 20px;
-            max-height: 70px; 
+            max-height: 70px;
         }
+
         .menu-icon {
             position: absolute;
-            top: 5px;
-            left: 80px;
+            top: 20px;
+            left: 90px;
             font-size: 40px;
             cursor: pointer;
         }
@@ -87,49 +92,75 @@
             transform: scaleX(-1);
             filter: invert(1);
         }
-        main {
-            padding: 2rem;
-            transition: margin-left 0.5s;
-            padding: 16px;
-        }
+
         footer {
             background-color: #333;
             color: #fff;
             padding: 1rem;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
         }
+
         .goal {
             margin: 2rem 0;
             padding: 1rem;
             background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            position: relative;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-            min-height: 150px;
         }
-        .goal:hover .goal-text {
-            display: none;
+
+        .goal img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 2px solid #ddd;
         }
+
+        .goal h2 {
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .goal p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .progress,
+        .approach {
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .approach h3, .progress h3 {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .approach {
+            display: block;
+        }
+
         .goal:hover .progress {
             display: block;
         }
-        .progress {
+
+        .goal:hover .approach {
             display: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 1rem;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
+        .goal .approach {
+            display: block;
+        }
+
+        .goal .progress {
+            display: none;
+        }
+
     </style>
     <script>
         function toggleDropdown(id) {
@@ -140,16 +171,19 @@
                 content.style.display = "block";
             }
         }
+
         function openNav() {
             document.getElementById("mySidebar").style.width = "250px";
             document.getElementById("main").style.marginLeft = "250px";
         }
+
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
     </script>
 </head>
+
 <body>
     <header>
         <div class="menu-icon" onclick="openNav()">
@@ -171,59 +205,69 @@
     </div>
     <main id="main">
         <div class="goal">
-            <h2>Goal 1: Enhance Oral Communication Skills</h2>
-            <p class="goal-text">Goal: Enhance my oral communication skills by actively participating in team meetings, presenting project updates, and engaging in discussions with colleagues and stakeholders. I aim to clearly and confidently convey complex ESG concepts, provide constructive feedback, and effectively collaborate with team members to drive sustainable initiatives.</p>
+            <img src="communication.jpg" alt="Communication">
+            <h2>Goal: Enhance Oral Communication Skills</h2>
+            <div class="approach">
+                <h3>Approach:</h3>
+                <p>Enhance my oral communication skills by actively participating in team meetings, presenting project updates, and engaging in discussions with colleagues and stakeholders.</p>
+            </div>
             <div class="progress">
-                <h2>Goal 1: Enhance Oral Communication Skills</h2>
-                <p>Progress: I have been actively participating in team meetings and presenting project updates. I have definitely seen improvement compared to when I initially started working at Pure Industrial. By consistently engaging in discussions and presenting complex ESG concepts, I have gained confidence and clarity in my communication. Additionally, providing constructive feedback and collaborating with team members has further enhanced my oral communication skills.</p>
+                <h3>Progress:</h3>
+                <p>Actively participating in meetings and presenting project updates, gaining confidence in conveying complex ESG concepts clearly.</p>
             </div>
         </div>
         <div class="goal">
-            <h2>Goal 2: Enhance Professional and Ethical Behavior</h2>
-            <p class="goal-text">Goal: Enhance my professional and ethical behavior in teamwork by fostering a collaborative and respectful work environment. I aim to build strong relationships with colleagues, demonstrate integrity, and contribute positively to team dynamics.</p>
+            <img src="behaviour.jpg" alt="Behavior">
+            <h2>Goal: Enhance Professional and Ethical Behavior</h2>
+            <div class="approach">
+                <h3>Approach:</h3>
+                <p>Foster a collaborative and respectful work environment by building strong relationships and demonstrating integrity.</p>
+            </div>
             <div class="progress">
-                <h2>Goal 2: Enhance Professional and Ethical Behavior</h2>
-                <p>Progress: I have been fostering a collaborative and respectful work environment. By actively listening to colleagues, demonstrating integrity in my actions, and contributing positively to team dynamics, I have built strong relationships with my peers. This has created a supportive and respectful work environment, enhancing my professional and ethical behavior.</p>
+                <h3>Progress:</h3>
+                <p>Built strong relationships with colleagues, fostering a supportive and respectful workplace.</p>
             </div>
         </div>
         <div class="goal">
-            <h2>Goal 3: Enhance Critical and Creative Thinking</h2>
-            <p class="goal-text">Goal: Enhance my critical and creative thinking skills by engaging in thorough inquiry and analysis. I aim to develop the ability to ask insightful questions, gather and evaluate relevant information, and generate innovative solutions to complex problems.</p>
+            <img src="thinking.jpeg" alt="Critical Thinking">
+            <h2>Goal: Enhance Critical and Creative Thinking</h2>
+            <div class="approach">
+                <h3>Approach:</h3>
+                <p>Develop critical and creative thinking skills by asking insightful questions and generating innovative solutions.</p>
+            </div>
             <div class="progress">
-                <h2>Goal 3: Enhance Critical and Creative Thinking</h2>
-                <p>Progress: I have been engaging in thorough inquiry and analysis. By asking insightful questions, gathering and evaluating relevant information, and generating innovative solutions to complex problems, I have enhanced my critical and creative thinking skills. This has allowed me to approach challenges with a fresh perspective and develop effective strategies for problem-solving.</p>
+                <h3>Progress:</h3>
+                <p>Engaged in inquiry and analysis, leading to innovative problem-solving approaches.</p>
             </div>
         </div>
         <div class="goal">
-            <h2>Goal 4: Enhance Global Understanding</h2>
-            <p class="goal-text">Goal: Enhance my global understanding by increasing my civic knowledge and engagement. I aim to develop a deeper awareness of global issues, understand diverse perspectives, and actively participate in civic activities that promote positive change.</p>
+            <img src="understanding.jpg" alt="Understanding">
+            <h2>Goal: Enhance Global Understanding</h2>
+            <div class="approach">
+                <h3>Approach:</h3>
+                <p>Increase civic knowledge and engage with diverse perspectives to understand global issues better.</p>
+            </div>
             <div class="progress">
-                <h2>Goal 4: Enhance Global Understanding</h2>
-                <p>Progress: I have been increasing my civic knowledge and engagement. By staying informed about global issues, understanding diverse perspectives, and actively participating in civic activities, I have developed a deeper awareness of global challenges. This has enabled me to contribute to positive change and promote a more inclusive and informed community.</p>
+                <h3>Progress:</h3>
+                <p>Stayed informed on global challenges and actively participated in civic activities for positive change.</p>
             </div>
         </div>
         <div class="goal">
-            <h2>Goal 5: Improve Technological Literacy</h2>
-            <p class="goal-text">Goal: Improve my technological literacy by becoming more proficient with digital tools and technologies. I aim to understand and effectively use various software and hardware to enhance my productivity and problem-solving skills.</p>
+            <img src="literacy.jpg" alt="Technological Literacy">
+            <h2>Goal: Improve Technological Literacy</h2>
+            <div class="approach">
+                <h3>Approach:</h3>
+                <p>Become proficient with digital tools and technologies to enhance productivity and problem-solving.</p>
+            </div>
             <div class="progress">
-                <h2>Goal 5: Improve Technological Literacy</h2>
-                <p>Progress: I have been becoming more proficient with digital tools and technologies. By learning and effectively using various software and hardware, I have enhanced my productivity and problem-solving skills. This has allowed me to streamline processes, automate tasks, and improve overall efficiency in my work.</p>
+                <h3>Progress:</h3>
+                <p>Learned and effectively used various tools, streamlining processes and improving efficiency.</p>
             </div>
         </div>
     </main>
     <footer>
         <p>&copy; Abishec's Fall 2024 Work Term Goals</p>
     </footer>
-    <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-    </script>
 </body>
+
 </html>
