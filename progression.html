@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progression</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('progress.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+        header {
+            background-color: rgba(85, 85, 85, 0.7);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            max-height: 70px;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 5px;
+            left: 80px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .menu-icon img {
+            width: 40px;
+            height: 40px;
+            filter: invert(1);
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+            text-decoration: underline;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .sidebar .closebtn img {
+            width: 30px;
+            height: 30px;
+            transform: scaleX(-1);
+            filter: invert(1);
+        }
+        main {
+            padding: 2rem;
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+        footer {
+            background-color: rgba(85, 85, 85, 0.7);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .progression {
+            margin: 2rem 0;
+            padding: 1rem;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .progression h2 {
+            color: #555;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+        }
+        .progression p {
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+        .dropdown {
+            margin: 1rem 0;
+        }
+        .dropdown button {
+            width: 100%;
+            padding: 1rem;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+        }
+        .dropdown-content {
+            display: none;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+        }
+        .dropdown-content p {
+            margin: 0.5rem 0;
+        }
+        .dropdown-content ul {
+            list-style-type: disc;
+            margin: 0.5rem 0 0.5rem 2rem;
+        }
+        .dropdown-content ul li {
+            margin: 0.5rem 0;
+        }
+    </style>
+    <script>
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="openNav()">
+            <img src="sidebar.png" alt="Menu Icon">
+        </div>
+        <h1>Progression</h1>
+        <img src="logo.jpg" alt="Logo">
+    </header>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <img src="sidebar.png" alt="Close Sidebar">
+        </a>
+        <a href="index.html">Home</a>
+        <a href="description.html">Description</a>
+        <a href="experience.html">Experience</a>
+        <a href="goals.html">Goals</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="progression.html">Progression</a>
+        <a href="contributions.html">Contributions</a>
+        <a href="performance-evaluation.html">Performance Evaluation</a>
+        <a href="conclusion.html">Conclusion</a>
+    </div>
+    <main id="main">
+        <div class="progression">
+            <h2>Progression</h2>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('goals')">Did you develop goals relating to your job tasks?</button>
+                <div id="goals" class="dropdown-content">
+                    <p>Yes, I set specific goals to align with my role and foster both professional and personal growth. These included enhancing my oral communication skills by participating in meetings and presenting updates, improving my professional and ethical behavior by building stronger relationships with colleagues, and developing my critical thinking abilities to find innovative solutions to challenges. I also aimed to increase my global understanding by staying informed on broader issues, and improve my technological literacy by mastering tools like Workiva, MySQL, and Python. These goals helped me stay focused on key areas that would allow me to make more meaningful contributions in my role.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('skills')">What skills did you want to learn? How will these tasks benefit your next work experience?</button>
+                <div id="skills" class="dropdown-content">
+                    <p>I wanted to improve a variety of skills. Oral communication was a key focus, as I wanted to speak more confidently in team discussions and present my ideas clearly. I also aimed to develop my critical thinking skills to help me approach problems from different angles and create innovative solutions. Another goal was to improve my technological proficiency, particularly with tools like Workiva, MySQL, and Python, to increase my efficiency and streamline workflows. I also focused on building my professional behavior, making sure I contributed positively to the team and worked well with others. These skills will benefit my future work experiences by allowing me to communicate better, think creatively, and use technology more effectively to solve problems.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('technologies')">What technologies did you want to work with and why?</button>
+                <div id="technologies" class="dropdown-content">
+                    <p>I was particularly interested in working with Workiva, MySQL, and Python. These technologies are essential for my role, as they allow for efficient data management, workflow automation, and improved collaboration. I wanted to gain a deeper understanding of Workiva, as it’s a powerful platform for managing and reporting data. Additionally, improving my skills in MySQL and Python would enable me to handle large datasets, automate repetitive tasks, and improve overall process efficiency. However, I was also eager to explore Yardi and Microsoft Based Tools (PowerBI and Automate). These technologies are crucial for property management and data analysis, and I saw a great opportunity to build off and integrate them into my skill set. Unfortunately, due to time constraints and the technical demands of my primary role, I wasn't able to dedicate sufficient time to learning these tools. Despite this, I look forward to gaining experience with them in the future, as they are valuable assets in data management and business decision-making.</p>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button onclick="toggleDropdown('reflection')">Reflecting on your goals/learning outcomes, what goals did you complete? What goals were you not successful in completing and why?</button>
+                <div id="reflection" class="dropdown-content">
+                    <p>I successfully met several of my goals. I improved my oral communication by actively participating in team meetings and presenting updates, which boosted my confidence in conveying complex ideas. I also made significant progress in enhancing my professional behavior by building strong relationships with my colleagues and fostering a collaborative work environment. My critical thinking abilities were honed as I engaged in problem-solving and came up with creative solutions. In terms of technology, I successfully learned and applied Workiva, MySQL, and Python, allowing me to streamline data processes and improve workflow automation. However, I wasn’t able to focus as much on my goal of enhancing global understanding due to the technical nature of my role, which limited my time for exploring broader global issues. Despite this, I made significant strides in other areas that will support my career moving forward.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;Abishec's Fall 2024</p>
+    </footer>
+</body>
+</html>

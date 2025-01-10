@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Description</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #444;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            position: absolute;
+            top: 30px;
+            right: 20px;
+            max-height: 70px;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 5px;
+            left: 80px;
+            font-size: 40px;
+            cursor: pointer;
+        }
+        .menu-icon img {
+            width: 40px;
+            height: 40px;
+            filter: invert(1);
+        }
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidebar a {
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+            text-decoration: underline;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .sidebar .closebtn img {
+            width: 30px;
+            height: 30px;
+            transform: scaleX(-1);
+            filter: invert(1);
+        }
+        main {
+            padding: 2rem;
+            transition: margin-left 0.5s;
+        }
+        footer {
+            background-color: #444;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .description {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+        }
+        .description h2 {
+            color: #444;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+        .description p {
+            margin: 1rem 0;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        .description p:first-of-type {
+            font-weight: bold;
+        }
+        .button {
+            background-color: #444;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            display: inline-block;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #575757;
+        }
+    </style>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="openNav()">
+            <img src="sidebar.png" alt="Menu Icon">
+        </div>
+        <h1>Description</h1>
+        <img src="logo.jpg" alt="Logo">
+    </header>
+
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+            <img src="sidebar.png" alt="Close Sidebar">
+        </a>
+        <a href="index.html">Home</a>
+        <a href="description.html">Description</a>
+        <a href="experience.html">Experience</a>
+        <a href="goals.html">Goals</a>
+        <a href="learning-outcomes.html">Learning Outcomes</a>
+        <a href="progression.html">Progression</a>
+        <a href="contributions.html">Contributions</a>
+        <a href="performance-evaluation.html">Performance Evaluation</a>
+        <a href="conclusion.html">Conclusion</a>
+    </div>
+
+    <main id="main">
+        <div class="description">
+            <h2>My Role at Pure Industrial</h2>
+            <p>Initially, my role as the Energy and Sustainability Analyst Intern focused on the collection and analysis of energy and sustainability data. I assisted in mapping out new sustainability programs and identifying opportunities for energy savings and incentives across capital and operational projects. This gave me the chance to make a meaningful contribution to the company’s sustainability efforts while understanding the impact of energy management on business operations.</p>
+
+            <p>As the term progressed, however, my responsibilities evolved towards revamping Pure Industrial's Workiva workspace. This shift required a greater focus on the company’s internal systems, including enhancing workflows, automating processes, and integrating datasets. In this regard, MySQL and Python became essential tools to address various technical challenges. These tasks demanded a thorough understanding of database management and automation, areas I had honed both in class and through prior hands-on experiences.</p>
+
+            <p>This role required a combination of <b>technical</b> and <b>collaborative</b> skills. I applied my proficiency in <b>MySQL</b>, <b>Python</b>, and <b>data automation</b> to streamline processes and enhance data workflows. In addition, working with cross-functional teams, including <b>Data Analytics</b> and <b>Property Directors</b> helped me improve my communication and problem-solving skills. I gained valuable insights into how sustainability initiatives are intertwined with data management, real estate, and business operations.</p>
+
+            <p>The most interesting aspect of my role was the opportunity to blend <b>technical problem-solving</b> with <b>sustainability goals</b>. While my primary focus initially was on energy data, the pivot to Workiva optimization provided me with an opportunity to directly impact organizational efficiency by improving data integration and automation. This experience deepened my technical skills while giving me a better understanding of how technology can help drive sustainability in business.</p>
+            
+            <a href="experience.html" class="button">Learn More About My Experience</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Abishec's Fall 2024 Performance Evaluation</p>
+    </footer>
+</body>
+</html>
